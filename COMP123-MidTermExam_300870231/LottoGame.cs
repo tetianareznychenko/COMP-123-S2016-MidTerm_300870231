@@ -110,11 +110,20 @@ namespace COMP123_MidTermExam_300870231
         // CREATE the private _initialize method here -----------------------------
         private void _initialize()
         {
- 
-
+            List<int> _numberList = new List<int>();
+            List<int> _elementList = new List<int>();
+            Random _random = new Random(); 
         }
 
         // CREATE the private _build method here -----------------------------------
+        private void _build ()
+        {
+            for (int index = 1; index < SetSize; index++)
+            {
+                NumberList.Add(index);
+            }
+
+        }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -147,5 +156,23 @@ namespace COMP123_MidTermExam_300870231
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
+
+        public void PickElements()
+        {
+            if (ElementList.Count>0)
+            {
+                NumberList.Clear();
+                ElementList.Clear();
+                this._build(); 
+            }
+           
+            int pickedNumber;
+            pickedNumber = random.Next(0, NumberList.Count); 
+            pickedNumber.Add(NumberList[ElementList]);
+            NumberList.RemoveAt(ElementList);       
+        }
     }
 }
+
+
+
