@@ -108,6 +108,13 @@ namespace COMP123_MidTermExam_300870231
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the private _initialize method here -----------------------------
+        /**
+ * <summary>
+ * This method will	instantiate new objects	for	the	private	fields _numberList,	_elementList and _random
+ * </summary>
+ * 
+ * @return {void}
+ */
         private void _initialize()
         {
             List<int> _numberList = new List<int>();
@@ -116,6 +123,14 @@ namespace COMP123_MidTermExam_300870231
         }
 
         // CREATE the private _build method here -----------------------------------
+        /**
+ * <summary>
+ * This method 	add Integer	Literals	from	1	to	SetSize to	the	read-only
+NumberList property
+ * </summary>
+ * 
+ * @return {void}
+ */
         private void _build()
         {
             for (int index = 1; index < SetSize; index++)
@@ -156,7 +171,15 @@ namespace COMP123_MidTermExam_300870231
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
-
+        /**
+ * <summary>
+ * This method 	randomly	Select and	Remove numbers	from	the
+read-only NumberList property and Add	them	to	the read-only ElementList property.
+ * </summary>
+ * 
+ * @return {void}
+ * @param {int} pickedNumber
+ */
         public void PickElements()
         {
             if (ElementList.Count > 0)
