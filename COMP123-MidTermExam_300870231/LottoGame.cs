@@ -47,7 +47,7 @@ namespace COMP123_MidTermExam_300870231
             }
             set
             {
-                this._elementNumber = value; 
+                this._elementNumber = value;
             }
         }
         public List<int> NumberList
@@ -112,11 +112,11 @@ namespace COMP123_MidTermExam_300870231
         {
             List<int> _numberList = new List<int>();
             List<int> _elementList = new List<int>();
-            Random _random = new Random(); 
+            Random _random = new Random();
         }
 
         // CREATE the private _build method here -----------------------------------
-        private void _build ()
+        private void _build()
         {
             for (int index = 1; index < SetSize; index++)
             {
@@ -159,17 +159,19 @@ namespace COMP123_MidTermExam_300870231
 
         public void PickElements()
         {
-            if (ElementList.Count>0)
+            if (ElementList.Count > 0)
             {
                 NumberList.Clear();
                 ElementList.Clear();
-                this._build(); 
+                this._build();
             }
-           
-            int pickedNumber;
-            pickedNumber = random.Next(0, NumberList.Count); 
-            pickedNumber.Add(NumberList[ElementList]);
-            NumberList.RemoveAt(ElementList);       
+
+            for (int pickedNumber = 0; pickedNumber < random.Next(0, NumberList.Count); pickedNumber++)
+            {
+                ElementList.Add(NumberList[pickedNumber]);
+                NumberList.RemoveAt(ElementList[pickedNumber]);
+            }
+            ElementList.Sort();
         }
     }
 }
