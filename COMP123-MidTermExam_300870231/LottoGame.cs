@@ -17,13 +17,65 @@ namespace COMP123_MidTermExam_300870231
      */
     public abstract class LottoGame
     {
+
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        // CREATE private fields here --------------------------------------------
+
+        // CREATE private fields here --------------------------------------------        
+        private List<int> _elementList;
+        private int _elementNumber;
+        private List<int> _numberList;
+        private int _setSize;
+        private Random _random;
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE public properties here -----------------------------------------
+        public List<int> ElementList
+        {
+            get
+            {
+                return this._elementList;
+            }
+        }
+
+        public int ElementNumber
+        {
+            get
+            {
+                return this._elementNumber;
+            }
+            set
+            {
+                this._elementNumber = value; 
+            }
+        }
+        public List<int> NumberList
+        {
+            get
+            {
+                return this._numberList;
+            }
+        }
+        public Random random
+        {
+            get
+            {
+                return this._random;
+            }
+        }
+        public int SetSize
+        {
+            get
+            {
+                return this._setSize;
+            }
+            set
+            {
+                this._setSize = value;
+            }
+        }
+
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -56,6 +108,11 @@ namespace COMP123_MidTermExam_300870231
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the private _initialize method here -----------------------------
+        private void _initialize()
+        {
+ 
+
+        }
 
         // CREATE the private _build method here -----------------------------------
 
@@ -85,6 +142,7 @@ namespace COMP123_MidTermExam_300870231
 
             return lottoNumberString;
         }
+
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
